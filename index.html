@@ -159,6 +159,29 @@
         <input type="submit" value="Submit Review">
     </form>
 </section>
+    <section class="section" style="background-color: #f9fbe7; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <div class="section-title" style="color: #4CAF50; font-size: 2.5em; text-align: center; margin-bottom: 15px; padding: 15px; background: #FFEB3B; color: green; border-radius: 5px; font-weight: bold;">
+        Image Gallery
+    </div>
+    <div class="content" style="text-align: center; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="image-container" style="width: 100%; max-width: 300px; margin: 10px; border: 2px solid blue; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); transition: box-shadow 0.5s ease-in-out;">
+            <img src="image 1.jpg" alt="Image 1" style="width: 100%; height: auto; display: block;">
+        </div>
+        <div class="image-container" style="width: 100%; max-width: 300px; margin: 10px; border: 2px solid blue; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); transition: box-shadow 0.5s ease-in-out;">
+            <img src="image 2.jpg" alt="Image 2" style="width: 100%; height: auto; display: block;">
+        </div>
+        <div class="image-container" style="width: 100%; max-width: 300px; margin: 10px; border: 2px solid blue; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); transition: box-shadow 0.5s ease-in-out;">
+            <img src="image 3.jpg" alt="Image 3" style="width: 100%; height: auto; display: block;">
+        </div>
+        <div class="image-container" style="width: 100%; max-width: 300px; margin: 10px; border: 2px solid blue; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); transition: box-shadow 0.5s ease-in-out;">
+            <img src="image 4.jpg" alt="Image 4" style="width: 100%; height: auto; display: block;">
+        </div>
+        <div class="image-container" style="width: 100%; max-width: 300px; margin: 10px; border: 2px solid blue; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); transition: box-shadow 0.5s ease-in-out;">
+            <img src="image 5.jpg" alt="Image 5" style="width: 100%; height: auto; display: block;">
+        </div>
+    </div>
+</section>
+
 
 <!-- Weather Section -->
 <section id="weather">
@@ -234,6 +257,16 @@
     function likeWebsite() {
         alert("Thank you for liking our website!");
     }
+    
+    const containers = document.querySelectorAll('.image-container');
+    containers.forEach(container => {
+        container.addEventListener('mouseenter', () => {
+            container.style.boxShadow = '0 0 25px rgba(0, 0, 255, 1)'; // Increase glow on hover
+        });
+        container.addEventListener('mouseleave', () => {
+            container.style.boxShadow = '0 0 15px rgba(0, 0, 255, 0.5)'; // Reset glow
+        });
+    });
 </script>
 
 </body>
